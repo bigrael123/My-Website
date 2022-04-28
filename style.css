@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+li{
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-image: url(./pexels-wendy-wei-4460483.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed;
+    padding: 0;
+    margin: 0;
+}
+.container .name h1{
+    font-size: 60px;
+}
+.links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#about p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container #form{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: thick double orangered;
+    padding: 25px; */
+}
+
+.container #form input{
+    width: 50%;
+}
+
+.container #form button{
+    width: 15%;
+}
+
+#header{
+    /* border-bottom: 2px rgb(255, 102, 0) solid; */
+    box-shadow: 1px 1px 10px  1px orangered;
+    background: rgb(0, 0, 0);
+    margin-bottom: 35px;
+    width: 100%;
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 35%, rgba(0,116,255,1) 100%); */
+}
+#header ul li a:hover{
+    color: orangered;
+    text-decoration: underline;
+}
+#header ul li a{
+    transition: 300ms;
+}
+#arrow img{
+    cursor: pointer;
+    animation: blink 1s steps(5,start) infinite;
+}
+@keyframes blink{
+    to{
+        visibility: hidden;
+    }
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+#form button{
+    /* background-color: black; */
+    background: linear-gradient(to right, blue 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border-radius: 0px 5px 5px 0px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 300ms ease-out;
+    margin-left: -8px;
+}
+#form button:hover{
+    background-position: left bottom;
+    color: orangered;
+}
+#form input{
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
+}
+
+@media only screen and (max-width: 300px){
+    #form input{
+        width: 100% !important;
+    }
+    #form button{
+        width: 100% !important;
+    }
+
+}
+@media only screen and (max-width: 1980px){
+    #form input{
+        width: 50% !important;
+    }
+    #form button{
+        width: 25% !important;
+    }
+}
+@media only screen and (max-width: 1000px){
+    #form input{
+        width: 75% !important;
+    }
+    #form button{
+        width: 32% !important;
+    }
+}
+@media only screen and (max-width: 773px){
+    #form input{
+        width: 100% !important;
+    }
+    #form button{
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #form input{
+        width: 100% !important;
+    }
+    #form button{
+        width: 100% !important;
+    }
+    #logo{
+        width: 50%;
+    }
+}

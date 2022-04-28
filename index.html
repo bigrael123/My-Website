@@ -1,0 +1,54 @@
+<html lang="pt-be">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Israel Beteguella</title>
+</head>
+<body>
+    <header id="header">
+        <div><img id="logo" src="./logopng.png" alt="Logo Israel Beteguella"></div>
+        <ul class="links">
+            <li><a target="_blank" href="https://github.com/bigrael123">Github</a></li>
+            <li><a target="_blank" href="mailto:bigrael-x@hotmail.com">Email</a></li>
+            <li><a target="_blank" href="https://wa.me/19992848589">Whatsapp</a></li>
+        </ul>
+    </div>
+    </header>
+    
+    <main>
+            <section class="container">
+                <div class="name">
+                    <h1>Israel Beteguella</h1>
+                    <h5>Desenvolvedor e QA Tester</h5>
+                </div>
+
+                <div onclick="displayAbout()" id="arrow">
+                    <img id="animation" src="./sort-down-solid.svg" alt="" width="10%" height="10%">
+                </div>
+                <div style="display: none;" id="about">
+                    <p>
+                        Eu sou Israel Beteguella, programador e Manual Tester. Nunca trabalhei com programação proficionalmente, mas gostaria de por a mão na massa.
+                    </p>
+                </div>
+                <div id="form">
+                    <p>Deixe seu contato</p>
+                    <form action="">
+                        <input type="text" placeholder="Seu Email">
+                        <button>Enviar!</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation')
+            arrow.classList.toggle('rotate')
+            var about = document.getElementById('about')
+            about.classList.toggle('active')
+        }
+        
+    </script>
+</body>
+</html>
