@@ -40,7 +40,7 @@
                     <form class="formulario" method="post" action="enviar.php">
                         <input onclick="startTopic()" onfocusout ="backTopico()" id = "tp" name="Topico" type="text" placeholder="Tópico">
                         <textarea  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
-                        <input id = "enviar" type="text" name="Email" placeholder="Seu Email">
+                        <input onclick="startEmail()" onfocusout ="backEmail()" id = "enviar" type="text" name="Email" placeholder="Seu Email">
                         <button>Enviar!</button>
                     </form>
                 </div>
@@ -71,12 +71,23 @@
                thetext.placeholder = "";
            }
            function backTopico(){
-                console.log("passei")
                 var thetext = document.getElementById('tp')
                 if(thetext.value === ""){
                   thetext.style.textAlign = "center"
                   thetext.placeholder = "Topico"
             }
+        }   
+        function startEmail(){
+               var thetext = document.getElementById('enviar')
+               thetext.style.textAlign = "start"
+               thetext.placeholder = "";
+           }
+         function backEmail(){
+             var thetext = document.getElementById('enviar')
+             if(thetext.value === ""){
+              thetext.style.textAlign = "center"
+                thetext.placeholder = "Seu Email"
+             }
         }   
     </script>
 </body>
