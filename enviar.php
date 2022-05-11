@@ -7,7 +7,7 @@ $Mensagem = addslashes($_POST['Mensagem']);
 
 $to = "bigrael-x@live.com";
 $subject ="Meu Site ".$Topico;
-$body = "Email: ".$Email."Mensagem ".$Mensagem;
+$body = "Email: ".$Email." Mensagem ".$Mensagem;
 
 $header = "From:bigrael-x@hotmail.com"."\r\n"
         ."Reply-To:".$Email."\e\n"

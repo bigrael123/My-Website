@@ -104,7 +104,7 @@ body{
     background-position: left bottom;
     color: orangered;
 }
-#form input{
+#form #enviar{
     border: none;
     border-radius: 5px 0px 0px 5px;
     
