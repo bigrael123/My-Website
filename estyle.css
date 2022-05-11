@@ -131,15 +131,18 @@ body{
         width: 75% !important;
     }
     #form button{
-        width: 32% !important;
+        width: 25% !important;
+    }
+    *{
+        font-size: 24px !important;
     }
 }
 @media only screen and (max-width: 773px){
     #form input{
-        width: 100% !important;
+        width: 50% !important;
     }
     #form button{
-        width: 100% !important;
+        width: 25% !important;
     }
     *{
         font-size: 15px !important;
@@ -148,10 +151,10 @@ body{
 
 @media only screen and (max-width: 450px){
     #form input{
-        width: 100% !important;
+        width: 50% !important;
     }
     #form button{
-        width: 100% !important;
+        width: 25% !important;
     }
     #logo{
         width: 50%;
@@ -160,9 +163,9 @@ body{
         font-size: 10px !important;
     }
 }
-@media only screen and (max-width: 300px){
+@media only screen and (max-width: 351px){
     *{
-        font-size: 10px !important;
+        font-size: 8px !important;
     }
 }
 @media only screen and (max-width: 273px){
