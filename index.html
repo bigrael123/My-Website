@@ -34,10 +34,13 @@
                         Eu sou Israel Beteguella, programador e Manual Tester. Nunca trabalhei com programação proficionalmente, mas gostaria de por a mão na massa.
                     </p>
                 </div>
+                
                 <div id="form">
                     <p>Deixe seu contato</p>
-                    <form action="">
-                        <input type="text" placeholder="Seu Email">
+                    <form class="formulario" method="post" action="enviar.php">
+                        <input name="Topico" type="text" placeholder="Escreva seu tópico">
+                        <textarea  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
+                        <input type="text" name="Email" placeholder="Seu Email">
                         <button>Enviar!</button>
                     </form>
                 </div>
@@ -50,7 +53,17 @@
             var about = document.getElementById('about')
             about.classList.toggle('active')
         }
-        
+        function changeMessageStyle(){
+            var thetext = document.getElementById('Messagebox')
+            thetext.style.textAlign = "start"
+            thetext.placeholder = ""
+        }
+        function backMessage(){
+            var thetext = document.getElementById('Messagebox')
+            thetext.style.textAlign = "center"
+            thetext.placeholder = "Escreva sua Mensagem"
+
+        }
     </script>
 </body>
 </html>

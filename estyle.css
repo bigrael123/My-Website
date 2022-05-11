@@ -79,6 +79,13 @@ body{
     transform: rotate(180deg);
     transition: 300ms;
 }
+#Messagebox{
+    border: none;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #form button{
     /* background-color: black; */
     background: linear-gradient(to right, blue 50%, black 50%);
@@ -109,6 +116,8 @@ body{
     display: block !important;
 }
 
+
+
 @media only screen and (max-width: 300px){
     #form input{
         width: 100% !important;
@@ -125,6 +134,10 @@ body{
     #form button{
         width: 25% !important;
     }
+    #Messagebox{
+
+        width: 75% !important;
+    }
 }
 @media only screen and (max-width: 1000px){
     #form input{
@@ -136,6 +149,7 @@ body{
     *{
         font-size: 24px !important;
     }
+
 }
 @media only screen and (max-width: 773px){
     #form input{
