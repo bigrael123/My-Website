@@ -1,22 +1,23 @@
 <?php
-if(isset($_POST["Email"]) && !empty($_POST[Email])){
-$Topico = addslashes($_POST['Topico']);
-$Email = addslashes($_POST['Email']);
-$Mensagem = addslashes($_POST['Mensagem']);
-}
 
-$to = "bigrael-x@live.com";
-$subject ="Meu Site ".$Topico;
-$body = "Email: ".$Email." Mensagem ".$Mensagem;
-
-$header = "From:bigrael-x@hotmail.com"."\r\n"
-        ."Reply-To:".$Email."\e\n"
-        ."X=Mailer:PHP/".phpversion();
-
-
-if(mail($to,$subject,$body,$header)){
-    echo("Email enviado com successo!");
-}else{
-    echo("O email não foi enviado");
+if($_POST) {
+  $to = "bigrael-x@hotmail.com"; // your mail here
+  $email = filter_var($_POST["Email"], FILTER_SANITIZE_EMAIL);
+  $subject = filter_var($_POST["Topico"], FILTER_SANITIZE_STRING);
+  $message = filter_var($_POST["Message"], FILTER_SANITIZE_STRING);
+  $body = "Message: $message\nE-mail: $email";
+  
+  //mail headers are mandatory for sending email
+  $headers = 'From: ' .$email . "\r\n". 
+  'Reply-To: ' . $email. "\r\n" . 
+  'X-Mailer: PHP/' . phpversion();
+ 
+  if(@mail($to, $subject, $body, $headers)) {
+    $output = json_encode(array('success' => true));
+    die($output);
+  } else {
+    $output = json_encode(array('success' => false));
+    die($output);
+  }
 }
 ?>

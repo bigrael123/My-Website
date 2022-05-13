@@ -6,6 +6,8 @@
     <meta name="description" content="Conheça Israel Beteguella e seu portifólio" />
     <link rel="stylesheet" href="estylex.css">
     <meta name="keywords" content="worker, freelancer, araras, desenvolvedor, manual, QA, Tester, portifólio,contato">
+     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+     <script src="Main.js"></script>
     <title>Israel Beteguella</title>
 </head>
 <body>
@@ -37,11 +39,13 @@
                 
                 <div id="form">
                     <p>Deixe seu contato</p>
-                    <form class="formulario" method="post" action="enviar.php">
+                    <form class="formulario" id="Formulario" method="post" action="enviar.php">
                         <input onclick="startTopic()" onfocusout ="backTopico()" id = "tp" name="Topico" type="text" placeholder="Tópico">
                         <textarea  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
                         <input onclick="startEmail()" onfocusout ="backEmail()" id = "enviar" type="text" name="Email" placeholder="Seu Email">
-                        <button>Enviar!</button>
+                        <button id = "submit" type = 'button'>Enviar!</button>
+                        <label id="loader"></label>
+                         <label id="info"></label>
                     </form>
                 </div>
             </section>
