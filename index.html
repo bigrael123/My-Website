@@ -39,9 +39,10 @@
                 
                 <div id="form">
                     <p>Deixe seu contato</p>
-                    <form class="formulario" id="Formulario" method="post" action="enviar.php">
+                    <form class="formulario" id="Formulario" method="post">
                         <input onclick="startTopic()" onfocusout ="backTopico()" id = "tp" name="Topico" type="text" placeholder="Tópico">
-                        <textarea  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
+                        <textarea oninput= "updatetext()"  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
+                        <input id ="realmessage" type= hidden>
                         <input onclick="startEmail()" onfocusout ="backEmail()" id = "enviar" type="text" name="Email" placeholder="Seu Email">
                         <button id = "submit" type = 'button'>Enviar!</button>
                         <label id="loader"></label>
@@ -80,7 +81,15 @@
                   thetext.style.textAlign = "center"
                   thetext.placeholder = "Topico"
             }
+            else{
+                
+            }
         }   
+        function updatetext(){
+             var therealtext = document.getElementById('realmessage')
+             var thetext = document.getElementById('Messagebox')
+             therealtext.value = thetext.value;
+        }
         function startEmail(){
                var thetext = document.getElementById('enviar')
                thetext.style.textAlign = "start"

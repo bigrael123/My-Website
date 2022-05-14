@@ -3,12 +3,12 @@ $(document).ready(function() {
     var form = $('#Formulario'),
         Email = $('#Email'),
         Topico = $('#td'),
-        Message = $('#Messagebox'),
+        Messagebox = $('#Messagebox'),
         info = $('#info'),
         loader = $('#loader'),
         submit = $("#submit");
     
-    form.on('input', '#Email, #td, #Message', function() {
+    form.on('input', '#Email, #Messagebox, #td', function() {
       $(this).css('border-color', '');
       info.html('').slideUp();
     });
@@ -26,7 +26,7 @@ $(document).ready(function() {
           if(data.success) {
             Email.val('');
             Topico.val('');
-            Message.val('');
+            Messagebox.val('');
             info.html('Messagem Enviada!').css('color', 'green').slideDown();
           } else {
             info.html('Email não foi enviado').css('color', 'red').slideDown();
