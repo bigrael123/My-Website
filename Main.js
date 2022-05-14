@@ -3,12 +3,12 @@ $(document).ready(function() {
     var form = $('#Formulario'),
         Email = $('#Email'),
         Topico = $('#td'),
-        Messagebox = $('#Messagebox'),
+        Message = $('#realmessage'),
         info = $('#info'),
         loader = $('#loader'),
         submit = $("#submit");
     
-    form.on('input', '#Email, #Messagebox, #td', function() {
+    form.on('input', '#Email, #realmessage, #td', function() {
       $(this).css('border-color', '');
       info.html('').slideUp();
     });
