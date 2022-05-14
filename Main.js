@@ -26,7 +26,7 @@ $(document).ready(function() {
           if(data.success) {
             Email.val('');
             Topico.val('');
-            Messagebox.val('');
+            Message.val('');
             info.html('Messagem Enviada!').css('color', 'green').slideDown();
           } else {
             info.html('Email não foi enviado').css('color', 'red').slideDown();
