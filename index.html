@@ -42,7 +42,7 @@
                     <form class="formulario" id="Formulario" method="post">
                         <input onclick="startTopic()" onfocusout ="backTopico()" id = "tp" name="Topico" type="text" placeholder="Tópico">
                         <textarea oninput= "updatetext()"  onclick="changeMessageStyle()" onfocusout ="backMessage()"  id="Messagebox" name="Mensagem" cols="40" placeholder="Escreva sua Mensagem" rows="5"></textarea>
-                        <input id ="realmessage" type= hidden>
+                        <input id ="realmessage" name = "Message "type= hidden>
                         <input onclick="startEmail()" onfocusout ="backEmail()" id = "enviar" type="text" name="Email" placeholder="Seu Email">
                         <button id = "submit" type = 'button'>Enviar!</button>
                         <label id="loader"></label>
